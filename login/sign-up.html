@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="/login/style.css/Sign-up.css">
+    <title>Sign-up</title>
+</head>
+<body>  
+        <div id="Sign-up">
+            <form action="" id="form-Sign-up">
+                <h1 class="form-heading">Đăng ký tài khoản LeanrDays</h1>
+                <i style="font-style: inherit;">Tài Khoản</i>
+                <div class="form-group">
+                    <i class="far fa-user"></i>
+                    <input type="text" class="form-input" placeholder="Nhập tài khoản">
+                </div>  
+                <i style="font-style: inherit;">Họ tên</i>
+                <div class="form-group">
+                    <i class="far fa-user-secret"></i>
+                    <input type="text" class="form-input" placeholder="Nhập họ tên">
+                </div>  
+                <i style="font-style: inherit;">Mật khẩu</i>
+                <div class="form-group">
+                    <i class="fas fa-key"></i>
+                    <input type="password" class="form-input" placeholder="Nhập mật khẩu">
+                    <div id="eye">
+                        <i class="far fa-eye"></i>
+                    </div>
+                </div>
+                <i style="font-style: inherit;">Nhập lại mật khẩu</i>
+                <div class="form-group">
+                    <i class="fas fa-unlock"></i>
+                    <input type="password" class="form-input" placeholder="Nhập lại mật khẩu">
+                    <div id="eye">
+                        <i class="far fa-eye"></i>
+                    </div>
+                </div>
+                <input type="submit" value="Đăng Ký" class="form-submit">
+                <div class="register">
+                   <i>Bạn đã có tài khoản?</i>
+                   <a href="/login/login.html">Đăng nhập</a>
+                </div>
+            </form>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#eye').click(function(){
+                $(this).toggleClass('open');
+                $(this).children('i').toggleClass('fa-eye-slash fa-eye');
+                if($(this).hasClass('open')){
+                    $(this).prev().attr('type', 'text');
+                }else{
+                    $(this).prev().attr('type', 'password');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
