@@ -10,6 +10,7 @@
     align-items: center;
 }
 #form-option{
+    border-radius: 25px;
     max-width: 600px;
     background: white;
     flex-grow: 1;
