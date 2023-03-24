@@ -43,7 +43,7 @@
     background-color: rgb(45,153,174);
 }
 .khung{
-    border-bottom: 1px solid rgb(194, 193, 193);;
+    border-bottom: 1px solid rgb(194, 193, 193);
 }
 .lambai{
     text-align: end;
@@ -55,4 +55,7 @@
 .tieude{
     color: white;
     font-size: 20px;
+}
+.active{
+    text-decoration: underline;
 }
