@@ -24,7 +24,7 @@
                 </div>
                 <div class="col-8 pt-2 pl-5">
                     <span class="tieude ml-5 font-weight-bold active">
-                        <a href="/main/option.html" class="tieude">Tạo đề thi</a>
+                        <a href="/main/option.html" class="tieude">Làm bài thi</a>
                     </span>
                     <span class="tieude ml-5 font-weight-bold">
                         <a href="/topic/topic.html" class="tieude">Tạo ma trận đề</a>
@@ -51,38 +51,39 @@
             <div>
                 <span style=" font-size: 20px;margin-left: 10px; width: 100px;">Ma trận đề</span>
                 <div class="form-group">
-                    <select id="select" style="margin-left: 18px; width: 300px;" onchange="getvalueoption()">
-                        <option value="Ma trận mặc định">Ma trận mặc định</option>
+                    <select id="selDeThi" style="margin-left: 18px; width: 300px;" onchange="getvalueoption()">
+                        <!-- <option value="Ma trận mặc định">Ma trận mặc định</option>
                         <option value="de thi 1">Đề thi thpt quốc gia 2023</option>
                         <option value="hehe">hehe</option>  
-                        <option value="hoho">hohos</option>
+                        <option value="hoho">hohos</option> -->
                     </select>
                 </div>            
             </div>
             <div id="item">
-                <div class="table-responsive">          
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <td>Thời gian</td>
-                        </tr>
-                        <tr>
-                            <td>Số câu</td>
-                        </tr>
-                      </thead>
-                      <tbody id="Load_Data">
-            
-            
-                      </tbody>
-                    </table>
-                    </div> 
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                      <label for="inputPassword6" class="col-form-label">Số cấu</label>
+                    </div>
+                    <div class="col-auto">
+                      <input type="number" id="inpSoCau" disabled class="form-control" aria-labelledby="passwordHelpInline">
+                    </div>
+                </div>
+                <div class="row g-3 align-items-center">
+                    <div class="col-auto">
+                      <label for="inputPassword6" class="col-form-label">Thời gian</label>
+                    </div>
+                    <div class="col-auto">
+                      <input type="number" id="inpTime" disabled class="form-control" aria-labelledby="passwordHelpInline">
+                    </div>
+                </div>
             </div>
             <div style="display: flex; justify-content: center; ">
-                <button class="nopbai pl-5 pr-5 border-0 p-2 mb-3 " style="width: auto;"><a href="/dethi.html"class="tieude">Tạo đề</a></button>
+                <button class="nopbai pl-5 pr-5 border-0 p-2 mb-3 " style="width: auto;"><a id="btnChuyenTrang" href="/dethi.html"class="tieude">Tạo đề</a></button>
             </div>
         </form>
     </div>
 </div>
+<script src="./option.js"></script>
 <script>
     function getvalueoption (){
        var id = document.getElementById("select").value;
