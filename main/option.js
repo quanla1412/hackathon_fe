@@ -33,7 +33,7 @@ function renderSoCauVaTime(matrix_id) {
         inpTime.value = data.time;
 
         const btnChuyenTrang = document.getElementById('btnChuyenTrang');
-        btnChuyenTrang.href = '../dethi.html?matrix_id=' + matrix_id;
+        btnChuyenTrang.href = '../dethi.html?matrix_id=' + matrix_id + '&total=' + data.total + '&time = ' + data.time;
     })
     .catch(error => {
     //handle error
