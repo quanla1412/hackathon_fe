@@ -3,7 +3,7 @@ window.onload = (event) => {
     const params = new URLSearchParams(window.location.search);
     console.log(params.get('matrix_id'));
     const matrix_id = params.get('matrix_id');
-
+    var stt = 1;
     fetch('http://localhost:3000/matrices/details/'+ matrix_id +'')
     .then(response => response.json())
     .then(data => {
@@ -14,7 +14,7 @@ window.onload = (event) => {
             .then(response => response.json())
             .then(question => {
                 console.log('question', question[0]);
-                renderCauhoi(question[0]._id, question[0].content);
+                renderCauhoi(stt++, question[0]._id, question[0].content);
                 fetch('http://localhost:3000/answers/'+ question[0]._id)
                 .then(response => response.json())
                 .then(answer => {
@@ -36,10 +36,10 @@ window.onload = (event) => {
     });
 }
 
-function renderCauhoi(question_id, content){
+function renderCauhoi(stt, question_id, content){
     var render = '<div class="" id="ques'+question_id+'"">' +
     '<div>' +
-    '    <h5>'+ content +'</h5>' +
+    '    <h5>Câu ' + stt + ': ' + content +'</h5>' +
     '</div>';
     document.getElementById('divDeThi').innerHTML += render;
 }
