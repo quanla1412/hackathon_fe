@@ -49,3 +49,19 @@
 .form-submit:hover{
     border: 1px solid #54a0ff;
 }
+#item h2 {
+    font-size: 17px;
+}
+
+td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+table {
+    display: flex;
+}
+
+tbody#Load_Data {
+    padding-left: 85px;
+}

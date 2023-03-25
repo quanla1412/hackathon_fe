@@ -6,26 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet" href="/login/style.css/Sign-up.css">
+    <script src="/login/js/register.js"></script>
     <title>Sign-up</title>
 </head>
 <body>  
         <div id="Sign-up">
-            <form action="" id="form-Sign-up">
+            <form action="" method="POST"  id="form-Sign-up" onsubmit="register(event)">
                 <h1 class="form-heading">Đăng ký tài khoản LeanrDays</h1>
                 <i style="font-style: inherit;">Tài Khoản</i>
                 <div class="form-group">
                     <i class="far fa-user"></i>
-                    <input type="text" class="form-input" placeholder="Nhập tài khoản">
+                    <input type="text" class="form-input" name="username" id="username" placeholder="Nhập tài khoản">
                 </div>  
                 <i style="font-style: inherit;">Họ tên</i>
                 <div class="form-group">
                     <i class="far fa-user-secret"></i>
-                    <input type="text" class="form-input" placeholder="Nhập họ tên">
+                    <input type="text" class="form-input" name="fullname" id="fullname" placeholder="Nhập họ tên">
                 </div>  
                 <i style="font-style: inherit;">Mật khẩu</i>
                 <div class="form-group">
                     <i class="fas fa-key"></i>
-                    <input type="password" class="form-input" placeholder="Nhập mật khẩu">
+                    <input type="password" class="form-input" name="password" id="password" placeholder="Nhập mật khẩu">
                     <div id="eye">
                         <i class="far fa-eye"></i>
                     </div>

@@ -6,22 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="stylesheet" href="/login/style.css/login.css">
+    <script src="/login/js/login.js"></script>
     <title>Login</title>
 </head>
 <body>  
     <div>
         <div id="Login">
-            <form action="" id="form-login">
+            <form action="" method="POST" id="form-login" onsubmit="login(event)">
                 <h1 class="form-heading">Đăng nhập LearnDays</h1>
                 <i style="font-style: inherit;">Tài Khoản</i>
                 <div class="form-group">
                     <i class="far fa-user"></i>
-                    <input type="text" class="form-input" placeholder="Nhập tài khoản">
+                    <input type="text" class="form-input" name="username" placeholder="Nhập tài khoản" required>
                 </div>  
                 <i style="font-style: inherit;">Mật khẩu</i>
                 <div class="form-group">
                     <i class="fas fa-key"></i>
-                    <input type="password" class="form-input" placeholder="Nhập mật khẩu">
+                    <input type="password" class="form-input" name="password" placeholder="Nhập mật khẩu" required>
                     <div id="eye">
                         <i class="far fa-eye"></i>
                     </div>
